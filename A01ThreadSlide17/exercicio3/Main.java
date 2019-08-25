@@ -9,8 +9,8 @@ package exercicio3;
  */
 public class Main {
     public static void main(String[] args) {
-        Thread a =new Thread_file();
-        Thread b =new Thread_wait();
+        Thread a =new ThreadFile();
+        Thread b =new ThreadWait();
         a.start();
         a.interrupt();
 

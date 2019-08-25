@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class Thread_file extends Thread {
+public class ThreadFile extends Thread {
     @Override
     public void run() {
         Path file = Paths.get("files/frases.txt");

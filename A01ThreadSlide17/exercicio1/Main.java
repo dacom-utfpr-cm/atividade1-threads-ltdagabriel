@@ -9,7 +9,7 @@ package exercicio1;
 public class Main {
     public static void main(String[] args) {
         for (int i = 0; i < 3; i++) {
-            new Thread_wait().start();
+            new ThreadWait().start();
         }
     }
 }
