@@ -9,19 +9,22 @@ import java.util.List;
 public class ThreadFile extends Thread {
     @Override
     public void run() {
-        Path file = Paths.get("files/frases.txt");
+        // Arquivo com as frases
+        Path file = Paths.get("resources/quotes.txt");
         try {
+            // Salva todas as frases em uma lista de frases, considerando que cada frase esta em uma linha
             List<String> lines = Files.readAllLines(file);
 
             for (String i : lines) {
+                // para cada linha, escreve a frase e aguarda 10s
                 System.out.println(i);
                 sleep(10_000);
 
             }
         } catch (InterruptedException e) {
-            System.out.println("Interrompido by " + e.getMessage());
+            System.out.printf("Tratando interrupção --> %s%n", e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.printf("Exceção de leitura de arquivo --> %s%n", e.getMessage());
         }
     }
 }

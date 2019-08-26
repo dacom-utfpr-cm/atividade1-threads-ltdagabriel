@@ -9,12 +9,15 @@ package exercicio3;
  */
 public class Main {
     public static void main(String[] args) {
+        // Foram copiados as classes ThreadFile e ThreadWait, e alterado exceção
         Thread a =new ThreadFile();
         Thread b =new ThreadWait();
+        // Inicializa a Thread
         a.start();
-        a.interrupt();
-
         b.start();
+        // Gera interrupção
+        a.interrupt();
         b.interrupt();
+
     }
 }
